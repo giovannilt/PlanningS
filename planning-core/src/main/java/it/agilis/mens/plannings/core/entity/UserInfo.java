@@ -1,4 +1,4 @@
-package it.agilis.mens.azzeroCO2.core.entity;
+package it.agilis.mens.plannings.core.entity;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

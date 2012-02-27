@@ -26,7 +26,7 @@
     <tx:annotation-driven transaction-manager="txManager"/>
 
     <bean id="dataSourceJndi" class="org.springframework.jndi.JndiObjectFactoryBean" lazy-init="true">
-        <property name="jndiName" value="${azzeroCO2.dataSource.jndiName}"/>
+        <property name="jndiName" value="${plannings.dataSource.jndiName}"/>
     </bean>
 
     <bean id="dataSourceHSQL" class="org.apache.commons.dbcp.BasicDataSource">
@@ -38,14 +38,9 @@
 
     <bean id="dataSourceMYSQL" class="org.apache.commons.dbcp.BasicDataSource">
         <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
-        <property name="url" value="jdbc:mysql://localhost:3306/azzeroco2"/>
-        <property name="username" value="azzeroco2"/>
-        <property name="password" value="azzeroco2"/>
+        <property name="url" value="jdbc:mysql://localhost:3306/plannings"/>
+        <property name="username" value="plannings"/>
+        <property name="password" value="plannings"/>
     </bean>
-
-  <!--  <bean id="propertiesManager" class="it.agilis.mens.plannings.server.PropertiesManager" scope="singleton">
-        <property name="imageSource" value="${azzeroCO2.imageSource}"/>
-        <property name="certificatiFolder" value="${azzeroCO2.certificatiFolder}"/>
-    </bean>-->
 
 </beans>

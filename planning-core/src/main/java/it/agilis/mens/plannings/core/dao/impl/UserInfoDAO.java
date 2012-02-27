@@ -1,9 +1,9 @@
-package it.agilis.mens.azzeroCO2.core.dao.impl;
+package it.agilis.mens.plannings.core.dao.impl;
 
-import it.agilis.mens.azzeroCO2.core.criteria.UserInfoCriteria;
-import it.agilis.mens.azzeroCO2.core.dao.DAOSupport;
-import it.agilis.mens.azzeroCO2.core.dao.IUserInfoDAO;
-import it.agilis.mens.azzeroCO2.core.entity.UserInfo;
+import it.agilis.mens.plannings.core.criteria.UserInfoCriteria;
+import it.agilis.mens.plannings.core.dao.DAOSupport;
+import it.agilis.mens.plannings.core.dao.IUserInfoDAO;
+import it.agilis.mens.plannings.core.entity.UserInfo;
 
 import java.util.List;
 

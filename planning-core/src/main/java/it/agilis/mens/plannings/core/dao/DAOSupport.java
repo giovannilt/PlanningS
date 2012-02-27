@@ -1,4 +1,4 @@
-package it.agilis.mens.azzeroCO2.core.dao;
+package it.agilis.mens.plannings.core.dao;
 
 import org.apache.log4j.Logger;
 import org.hibernate.Criteria;

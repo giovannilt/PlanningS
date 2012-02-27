@@ -1,6 +1,6 @@
-package it.agilis.mens.azzeroCO2.core.register;
+package it.agilis.mens.plannings.core.register;
 
-import it.agilis.mens.azzeroCO2.core.entity.UserInfo;
+import it.agilis.mens.plannings.core.entity.UserInfo;
 
 /**
  * Created by IntelliJ IDEA.

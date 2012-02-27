@@ -1,4 +1,4 @@
-package it.agilis.mens.azzeroCO2.core.criteria;
+package it.agilis.mens.plannings.core.criteria;
 
 import org.hibernate.criterion.DetachedCriteria;
 

@@ -1,6 +1,6 @@
-package it.agilis.mens.azzeroCO2.core.criteria;
+package it.agilis.mens.plannings.core.criteria;
 
-import it.agilis.mens.azzeroCO2.core.entity.UserInfo;
+import it.agilis.mens.plannings.core.entity.UserInfo;
 import org.hibernate.criterion.DetachedCriteria;
 import org.hibernate.criterion.Restrictions;
 
