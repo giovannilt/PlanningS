@@ -33,7 +33,7 @@ public class UserInfo implements Serializable {
     private String pIvaCF;
     private String telefono;
     private String fax;
-    private String cellulare;
+    private Long supplierId;
     private String email;
 
 
@@ -141,12 +141,12 @@ public class UserInfo implements Serializable {
         this.fax = fax;
     }
 
-    public String getCellulare() {
-        return cellulare;
+    public Long getSupplierID() {
+        return supplierId;
     }
 
-    public void setCellulare(String cellulare) {
-        this.cellulare = cellulare;
+    public void setSupplierID(Long supplierID) {
+        this.supplierId = supplierID;
     }
 
     public String getEmail() {
