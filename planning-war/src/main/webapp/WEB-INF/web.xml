@@ -43,8 +43,8 @@
     <context-param>
         <param-name>contextConfigLocation</param-name>
         <param-value>WEB-INF/applicationContext.xml
-            <!--classpath:it/agilis/mens/azzeroCO2/core/dao/HSQL-hibernate-context.xml-->
-            classpath:it/agilis/mens/plannings/core/dao/MySql-hibernate-context.xml
+            classpath:it/agilis/mens/plannings/core/dao/HSQL-hibernate-context.xml
+            <!--classpath:it/agilis/mens/plannings/core/dao/MySql-hibernate-context.xml-->
             classpath:it/agilis/mens/plannings/core/dao/context.xml
         </param-value>
     </context-param>

@@ -1,5 +1,8 @@
 package it.agilis.mens.plannings.core.entity;
 
+import it.agilis.mens.plannings.core.entity.validator.CaseMode;
+import it.agilis.mens.plannings.core.entity.validator.CheckCase;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -22,7 +25,7 @@ public class UserInfo implements Serializable {
     private Long id;
 
     @Pattern(regexp = "[0-9a-zA-Z\\.]{1,10}$")
-    @CheckDelistedStock
+    @CheckCase (CaseMode.UPPER)
     private String userName;
     private String password;
     private String nome;

@@ -2,8 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="46d6f950-67c5-46bc-b2de-d4a22f572ef1" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/planning-war/src/main/webapp/WEB-INF/lib/spring4gwt.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/planning-core/src/main/java/it/agilis/mens/plannings/core/entity/CheckDelistedStock.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/planning-core/src/main/java/it/agilis/mens/plannings/core/entity/validator/CaseMode.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/planning-core/src/main/java/it/agilis/mens/plannings/core/entity/validator/CheckCase.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/planning-core/src/main/java/it/agilis/mens/plannings/core/entity/validator/CheckCaseValidator.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/planning-core/src/main/resources/it/agilis/mens/plannings/core/dao/HSQL-hibernate-context.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/planning-core/src/main/java/it/agilis/mens/plannings/core/entity/CheckDelistedStock.java" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/planning-core/src/main/java/it/agilis/mens/plannings/core/entity/UserInfo.java" afterPath="$PROJECT_DIR$/planning-core/src/main/java/it/agilis/mens/plannings/core/entity/UserInfo.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/planning-war/src/main/webapp/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/planning-war/src/main/webapp/WEB-INF/web.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/planningS-app.iws" afterPath="$PROJECT_DIR$/planningS-app.iws" />
     </list>
     <ignored path="planningS-app.iws" />
@@ -62,31 +67,13 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="PropertiesManager.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/planning-war/src/main/java/it/agilis/mens/plannings/server/PropertiesManager.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="13" selection-start="217" selection-end="217" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HustonServicesImpl.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/planning-war/src/main/java/it/agilis/mens/plannings/server/HustonServicesImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="5" selection-start="857" selection-end="857" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="web.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/planning-war/src/main/webapp/WEB-INF/web.xml">
           <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorReferencesProvider">
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="48" selection-start="750" selection-end="750" vertical-scroll-proportion="-13.636364">
+            <state line="47" column="64" selection-start="1725" selection-end="1725" vertical-scroll-proportion="-32.045456">
               <folding />
             </state>
           </provider>
@@ -98,12 +85,88 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CheckDelistedStock.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/planning-core/src/main/java/it/agilis/mens/plannings/core/entity/CheckDelistedStock.java">
+      <file leaf-file-name="MySql-hibernate-context.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/planning-core/src/main/resources/it/agilis/mens/plannings/core/dao/MySql-hibernate-context.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="25" selection-start="456" selection-end="456" vertical-scroll-proportion="0.26615968">
+            <state line="6" column="4" selection-start="304" selection-end="304" vertical-scroll-proportion="-4.090909">
               <folding />
             </state>
+          </provider>
+          <provider editor-type-id="com.intellij.spring.perspectives.SpringBeansStructureEditorProvider">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="context.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/planning-core/src/main/resources/it/agilis/mens/plannings/core/dao/context.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="11" column="54" selection-start="657" selection-end="657" vertical-scroll-proportion="-7.5">
+              <folding />
+            </state>
+          </provider>
+          <provider editor-type-id="com.intellij.spring.perspectives.SpringBeansStructureEditorProvider">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CheckCaseValidator.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/planning-core/src/main/java/it/agilis/mens/plannings/core/entity/validator/CheckCaseValidator.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="31" column="50" selection-start="868" selection-end="868" vertical-scroll-proportion="0.39141414">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CaseMode.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/planning-core/src/main/java/it/agilis/mens/plannings/core/entity/validator/CaseMode.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="10" column="4" selection-start="240" selection-end="240" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CheckCase.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/planning-core/src/main/java/it/agilis/mens/plannings/core/entity/validator/CheckCase.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="15" column="36" selection-start="549" selection-end="549" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="OrderLine.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/planning-core/src/main/java/it/agilis/mens/plannings/core/entity/OrderLine.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="13" column="13" selection-start="311" selection-end="311" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserInfo.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/planning-core/src/main/java/it/agilis/mens/plannings/core/entity/UserInfo.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="27" column="6" selection-start="673" selection-end="673" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="applicationContext.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/planning-war/src/main/webapp/WEB-INF/applicationContext.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="40" column="52" selection-start="1919" selection-end="1919" vertical-scroll-proportion="-12.5">
+              <folding />
+            </state>
+          </provider>
+          <provider editor-type-id="com.intellij.spring.perspectives.SpringBeansStructureEditorProvider">
+            <state />
           </provider>
         </entry>
       </file>
@@ -127,22 +190,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/planning-core/src/main/java/it/agilis/mens/plannings/core/criteria/UserInfoCriteria.java" />
-        <option value="$PROJECT_DIR$/planning-core/src/main/java/it/agilis/mens/plannings/core/dao/IUserInfoDAO.java" />
-        <option value="$PROJECT_DIR$/planning-core/src/main/java/it/agilis/mens/plannings/core/register/IPlaningSRegister.java" />
-        <option value="$PROJECT_DIR$/planning-core/src/main/java/it/agilis/mens/plannings/core/dao/DAOSupport.java" />
-        <option value="$PROJECT_DIR$/planning-core/src/main/resources/it/agilis/mens/plannings/core/dao/MySql-hibernate-context.xml" />
         <option value="$PROJECT_DIR$/planning-core/src/main/resources/it/agilis/mens/plannings/core/dao/context.xml" />
         <option value="$PROJECT_DIR$/planning-war/src/main/webapp/Application.html" />
         <option value="$PROJECT_DIR$/planning-core/src/main/java/it/agilis/mens/plannings/core/dao/impl/UserInfoDAO.java" />
         <option value="$PROJECT_DIR$/planning-war/src/main/webapp/WEB-INF/applicationContext.xml" />
         <option value="$PROJECT_DIR$/planning-core/src/main/java/it/agilis/mens/plannings/core/register/impl/PlanningSRegister.java" />
-        <option value="$PROJECT_DIR$/planning-core/src/main/java/it/agilis/mens/plannings/core/entity/UserInfo.java" />
         <option value="$PROJECT_DIR$/planning-core/src/main/java/it/agilis/mens/plannings/core/entity/CheckDelistedStock.java" />
         <option value="$PROJECT_DIR$/planning-war/pom.xml" />
         <option value="$PROJECT_DIR$/planning-war/src/main/java/it/agilis/mens/plannings/client/HustonService.java" />
         <option value="$PROJECT_DIR$/planning-war/src/main/java/it/agilis/mens/plannings/server/HustonServicesImpl.java" />
         <option value="$PROJECT_DIR$/planning-war/src/main/webapp/WEB-INF/web.xml" />
+        <option value="$PROJECT_DIR$/planning-core/src/main/resources/it/agilis/mens/plannings/core/dao/HSQL-hibernate-context.xml" />
+        <option value="$PROJECT_DIR$/planning-core/src/main/java/it/agilis/mens/plannings/core/entity/validator/CheckCaseValidator.java" />
+        <option value="$PROJECT_DIR$/planning-core/src/main/java/it/agilis/mens/plannings/core/entity/validator/CheckDelistedStock.java" />
+        <option value="$PROJECT_DIR$/planning-core/src/main/java/it/agilis/mens/plannings/core/entity/validator/CaseMode.java" />
+        <option value="$PROJECT_DIR$/planning-core/src/main/java/it/agilis/mens/plannings/core/entity/validator/CheckCase.java" />
+        <option value="$PROJECT_DIR$/planning-core/src/main/java/it/agilis/mens/plannings/core/entity/UserInfo.java" />
       </list>
     </option>
   </component>
@@ -594,6 +657,14 @@
               <option name="myItemId" value="main" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dao" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -698,6 +769,44 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="entity" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="planningS-app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PlanningS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="planning-core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="entity" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="validator" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1089,12 +1198,13 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1280" height="1356" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32983023" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32983023" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.16006467" sideWeight="0.9191344" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30605564" sideWeight="0.7107062" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
@@ -1108,7 +1218,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.28666225" sideWeight="0.2111293" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32933232" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.34983766" sideWeight="0.6701698" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.34983766" sideWeight="0.73080033" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32914045" sideWeight="0.0" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Phing Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="JavaRebel Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -1118,7 +1228,6 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Archetypes" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.6816694" sideWeight="0.9191344" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
     </layout>
@@ -1180,82 +1289,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/planning-core/src/main/java/it/agilis/mens/plannings/core/dao/impl/UserInfoDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="13" selection-start="534" selection-end="534" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/planning-core/src/main/java/it/agilis/mens/plannings/core/register/impl/PlanningSRegister.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="37" selection-start="915" selection-end="915" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/planning-core/src/main/java/it/agilis/mens/plannings/core/entity/UserInfo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="13" selection-start="550" selection-end="550" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/planning-war/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="77" column="8" selection-start="2612" selection-end="2612" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/planning-war/src/main/webapp/WEB-INF/jboss-web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/classes.jar!/java/lang/annotation/RetentionPolicy.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="78" selection-start="355" selection-end="355" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/planning-war/src/main/webapp/WEB-INF/applicationContext.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="4" selection-start="845" selection-end="845" vertical-scroll-proportion="-11.590909">
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="com.intellij.spring.perspectives.SpringBeansStructureEditorProvider">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/planning-war/src/main/resources/git-bean.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="4" selection-start="318" selection-end="318" vertical-scroll-proportion="-3.409091">
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="com.intellij.spring.perspectives.SpringBeansStructureEditorProvider">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/planning-war/src/main/java/it/agilis/mens/plannings/client/Application.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="13" selection-start="195" selection-end="195" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/planning-war/src/main/java/it/agilis/mens/plannings/client/HustonService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="28" selection-start="347" selection-end="347" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/planning-war/src/main/java/it/agilis/mens/plannings/server/PropertiesManager.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="9" column="13" selection-start="217" selection-end="217" vertical-scroll-proportion="0.0">
@@ -1284,12 +1317,22 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/planning-core/src/main/resources/it/agilis/mens/plannings/core/dao/HSQL-hibernate-context.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="16" selection-start="1138" selection-end="1138" vertical-scroll-proportion="-15.681818">
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="com.intellij.spring.perspectives.SpringBeansStructureEditorProvider">
+        <state />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/planning-war/src/main/webapp/WEB-INF/web.xml">
       <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorReferencesProvider">
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="48" selection-start="750" selection-end="750" vertical-scroll-proportion="-13.636364">
+        <state line="47" column="64" selection-start="1725" selection-end="1725" vertical-scroll-proportion="-32.045456">
           <folding />
         </state>
       </provider>
@@ -1300,10 +1343,79 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/planning-core/src/main/java/it/agilis/mens/plannings/core/entity/CheckDelistedStock.java">
+    <entry file="file://$PROJECT_DIR$/planning-core/src/main/resources/it/agilis/mens/plannings/core/dao/context.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="25" selection-start="456" selection-end="456" vertical-scroll-proportion="0.26615968">
+        <state line="11" column="54" selection-start="657" selection-end="657" vertical-scroll-proportion="-7.5">
           <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="com.intellij.spring.perspectives.SpringBeansStructureEditorProvider">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/planning-core/src/main/resources/it/agilis/mens/plannings/core/dao/MySql-hibernate-context.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="4" selection-start="304" selection-end="304" vertical-scroll-proportion="-4.090909">
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="com.intellij.spring.perspectives.SpringBeansStructureEditorProvider">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/planning-war/src/main/webapp/WEB-INF/applicationContext.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="40" column="52" selection-start="1919" selection-end="1919" vertical-scroll-proportion="-12.5">
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="com.intellij.spring.perspectives.SpringBeansStructureEditorProvider">
+        <state />
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/javax/validation/validation-api/1.0.0.GA/validation-api-1.0.0.GA-sources.jar!/javax/validation/ConstraintValidator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="34" column="17" selection-start="1308" selection-end="1308" vertical-scroll-proportion="0.32412964">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/planning-core/src/main/java/it/agilis/mens/plannings/core/entity/OrderLine.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="13" selection-start="311" selection-end="311" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/planning-core/src/main/java/it/agilis/mens/plannings/core/entity/validator/CaseMode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="4" selection-start="240" selection-end="240" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/planning-core/src/main/java/it/agilis/mens/plannings/core/entity/UserInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="6" selection-start="673" selection-end="673" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/planning-core/src/main/java/it/agilis/mens/plannings/core/entity/validator/CheckCase.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="36" selection-start="549" selection-end="549" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/planning-core/src/main/java/it/agilis/mens/plannings/core/entity/validator/CheckCaseValidator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="50" selection-start="868" selection-end="868" vertical-scroll-proportion="0.39141414">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
