@@ -11,15 +11,7 @@ package it.agilis.mens.plannings.client;
 import com.google.gwt.user.client.rpc.RemoteService;
 import com.google.gwt.user.client.rpc.RemoteServiceRelativePath;
 
-import java.util.List;
-import java.util.Map;
-import com.google.gwt.user.client.rpc.RemoteService;
-import com.google.gwt.user.client.rpc.RemoteServiceRelativePath;
-
-import java.util.List;
-import java.util.Map;
-
-@RemoteServiceRelativePath("huston")
+@RemoteServiceRelativePath("plannings/huston")
 public interface HustonService extends RemoteService {
 
 

@@ -3,6 +3,7 @@ package it.agilis.mens.plannings.core.entity;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.validation.constraints.Pattern;
 import java.io.Serializable;
 
 /**
@@ -20,7 +21,8 @@ public class UserInfo implements Serializable {
     @GeneratedValue
     private Long id;
 
-
+    @Pattern(regexp = "[0-9a-zA-Z\\.]{1,10}$")
+    @CheckDelistedStock
     private String userName;
     private String password;
     private String nome;

@@ -1,10 +1,12 @@
 package it.agilis.mens.plannings.server;
 
-import com.google.gwt.user.server.rpc.RemoteServiceServlet;
 import it.agilis.mens.plannings.client.HustonService;
+import it.agilis.mens.plannings.core.register.impl.PlanningSRegister;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.config.AutowireCapableBeanFactory;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.context.WebApplicationContext;
 import org.springframework.web.context.support.WebApplicationContextUtils;
 
@@ -18,10 +20,19 @@ import javax.servlet.ServletException;
  * Time: 10:57 PM
  * To change this template use File | Settings | File Templates.
  */
-public class HustonServicesImpl extends RemoteServiceServlet implements
-        HustonService {
+
+@Service("hustonService")
+public class HustonServicesImpl implements HustonService {
     @Autowired
-    GitRepositoryState gitRepoState;
+    private GitRepositoryState gitRepoState;
+
+    @Autowired
+    private PlanningSRegister register;
+
+    @Autowired
+    @Qualifier("propertiesManager")
+    private PropertiesManager propertiesManager;
+
 
     public GitRepositoryState getGitRepoState() {
         return gitRepoState;
@@ -31,10 +42,6 @@ public class HustonServicesImpl extends RemoteServiceServlet implements
         this.gitRepoState = gitRepoState;
     }
 
-    @Autowired
-    @Qualifier("propertiesManager")
-    private PropertiesManager propertiesManager;
-
     public PropertiesManager getPropertiesManager() {
         return propertiesManager;
     }
@@ -43,15 +50,15 @@ public class HustonServicesImpl extends RemoteServiceServlet implements
         this.propertiesManager = propertiesManager;
     }
 
-    @Override
-    public void init(ServletConfig config) throws ServletException {
-        super.init(config);
-        WebApplicationContext ctx = WebApplicationContextUtils
-                .getRequiredWebApplicationContext(config.getServletContext());
-        AutowireCapableBeanFactory beanFactory = ctx
-                .getAutowireCapableBeanFactory();
-        beanFactory.autowireBean(this);
+    public PlanningSRegister getRegister() {
+        return register;
     }
+
+    public void setRegister(PlanningSRegister register) {
+        this.register = register;
+    }
+
+
 
 
 }

@@ -4,6 +4,8 @@ import it.agilis.mens.plannings.core.dao.IUserInfoDAO;
 import it.agilis.mens.plannings.core.entity.UserInfo;
 import it.agilis.mens.plannings.core.register.IPlaningSRegister;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.transaction.annotation.Transactional;
 
 /**
  * Created by IntelliJ IDEA.
@@ -13,11 +15,12 @@ import org.springframework.beans.factory.annotation.Autowired;
  * To change this template use File | Settings | File Templates.
  */
 
+@Transactional(readOnly= true)
 public class PlanningSRegister implements IPlaningSRegister {
 
     @Autowired
+    @Qualifier("userInfoDAO")
     private IUserInfoDAO userInfoDAO;
-
 
 
     public void setUserInfoDAO(IUserInfoDAO userInfoDAO) {
@@ -27,6 +30,7 @@ public class PlanningSRegister implements IPlaningSRegister {
 
 
     @Override
+    @Transactional(readOnly = false)
     public UserInfo saveUserInfo(UserInfo userInfo) throws Exception {
         return userInfoDAO.save(userInfo);
     }
