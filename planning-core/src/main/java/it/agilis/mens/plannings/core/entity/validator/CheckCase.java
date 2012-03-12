@@ -17,7 +17,7 @@ import java.lang.annotation.Documented;
 @Documented
 public @interface CheckCase {
 
-    String message() default "{it.agilis.mens.plannings.core.entity.validator.constraints.checkcase}";
+    String message() default "{it.agilis.mens.plannings.core.entity.validator.checkCase}";
 
     Class<?>[] groups() default {};
 

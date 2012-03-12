@@ -1,6 +1,6 @@
 package it.agilis.mens.plannings.core.register.impl;
 
-import it.agilis.mens.plannings.core.dao.IUserInfoDAO;
+import it.agilis.mens.plannings.core.dao.impl.UserInfoDAO;
 import it.agilis.mens.plannings.core.entity.UserInfo;
 import it.agilis.mens.plannings.core.register.IPlaningSRegister;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,15 +19,16 @@ import org.springframework.transaction.annotation.Transactional;
 public class PlanningSRegister implements IPlaningSRegister {
 
     @Autowired
-    @Qualifier("userInfoDAO")
-    private IUserInfoDAO userInfoDAO;
+    @Qualifier("userInfoDAOBean")
+    private UserInfoDAO userInfoDAO;
 
-
-    public void setUserInfoDAO(IUserInfoDAO userInfoDAO) {
+    public void setUserInfoDAO(UserInfoDAO userInfoDAO) {
         this.userInfoDAO = userInfoDAO;
     }
 
-
+    public UserInfoDAO getUserInfoDAO() {
+        return userInfoDAO;
+    }
 
     @Override
     @Transactional(readOnly = false)

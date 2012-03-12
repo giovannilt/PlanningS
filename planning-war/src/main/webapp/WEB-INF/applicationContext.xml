@@ -2,7 +2,6 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns:context="http://www.springframework.org/schema/context" xmlns:tx="http://www.springframework.org/schema/tx"
-
        xsi:schemaLocation="http://www.springframework.org/schema/beans
            http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
            http://www.springframework.org/schema/context
@@ -15,11 +14,7 @@
     <bean id="propertyConfigurer" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer"/>
 
 
-    <context:component-scan base-package="it.agilis.mens.plannings"/>
-
-    <bean class="it.agilis.mens.plannings.core.register.impl.PlanningSRegister">
-        <!-- DA IGNETTARE I DAO.....-->
-    </bean>
+    <context:component-scan base-package="it.agilis.mens"/>
 
     <bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
         <property name="systemPropertiesModeName" value="SYSTEM_PROPERTIES_MODE_OVERRIDE"/>
@@ -30,8 +25,12 @@
 
     <tx:annotation-driven transaction-manager="txManager"/>
 
-    <bean id="dataSourceJndi" class="org.springframework.jndi.JndiObjectFactoryBean" lazy-init="true">
-        <property name="jndiName" value="${plannings.dataSource.jndiName}"/>
+    <bean id="userInfoDAOBean" class="it.agilis.mens.plannings.core.dao.impl.UserInfoDAO" lazy-init="true">
+        <property name="sessionFactory" ref="sessionFactory"/>
+    </bean>
+
+    <bean id="PlanningSRegister" class="it.agilis.mens.plannings.core.register.impl.PlanningSRegister">
+        <property name="userInfoDAO" ref="userInfoDAOBean"/>
     </bean>
 
     <bean id="dataSourceHSQL" class="org.apache.commons.dbcp.BasicDataSource">
@@ -46,6 +45,22 @@
         <property name="url" value="jdbc:mysql://localhost:3306/plannings"/>
         <property name="username" value="plannings"/>
         <property name="password" value="plannings"/>
+    </bean>
+
+    <!-- Gilead -->
+    <bean id="proxySerializer" class="net.sf.gilead.core.serialization.GwtProxySerialization" />
+
+    <bean id="proxyStore" class="net.sf.gilead.core.store.stateless.StatelessProxyStore">
+        <property name="proxySerializer" ref="proxySerializer" />
+    </bean>
+
+    <bean id="persistenceUtil" class="net.sf.gilead.core.hibernate.HibernateUtil">
+        <property name="sessionFactory" ref="sessionFactory" />
+    </bean>
+
+    <bean id="persistentBeanManager" class="net.sf.gilead.core.PersistentBeanManager">
+        <property name="proxyStore" ref="proxyStore" />
+        <property name="persistenceUtil" ref="persistenceUtil" />
     </bean>
 
 </beans>

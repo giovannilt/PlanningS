@@ -15,8 +15,6 @@ import java.util.List;
  * Time: 10:06 PM
  * To change this template use File | Settings | File Templates.
  */
-
-
 @Repository
 public class UserInfoDAO extends DAOSupport implements IUserInfoDAO {
     @Override

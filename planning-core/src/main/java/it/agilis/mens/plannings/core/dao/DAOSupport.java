@@ -3,7 +3,9 @@ package it.agilis.mens.plannings.core.dao;
 import org.apache.log4j.Logger;
 import org.hibernate.Criteria;
 import org.hibernate.Session;
+import org.hibernate.SessionFactory;
 import org.hibernate.criterion.DetachedCriteria;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.orm.hibernate3.HibernateAccessor;
 import org.springframework.orm.hibernate3.HibernateCallback;
@@ -19,6 +21,12 @@ public class DAOSupport extends HibernateDaoSupport {
 
     interface MyRunnable {
         Object run(HibernateTemplate hibernateTemplate) throws Exception;
+    }
+
+
+    @Autowired
+    public void init(SessionFactory factory) {
+        setSessionFactory(factory);
     }
 
     private static Logger logger = Logger.getLogger(DAOSupport.class);
