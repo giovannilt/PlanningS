@@ -10,13 +10,15 @@
 
     <!-- Servlets -->
     <servlet>
-        <servlet-name>hustonServlet</servlet-name>
-        <servlet-class>it.agilis.mens.plannings.server.HustonServicesImpl</servlet-class>
+        <servlet-name>hustonService</servlet-name>
+        <servlet-class>org.spring4gwt.server.SpringGwtRemoteServiceServlet</servlet-class>
+        <!--servlet-class>it.agilis.mens.plannings.server.HustonServicesImpl</servlet-class-->
     </servlet>
 
+
     <servlet-mapping>
-        <servlet-name>hustonServlet</servlet-name>
-        <url-pattern>/plannings/huston</url-pattern>
+        <servlet-name>hustonService</servlet-name>
+        <url-pattern>/plannings/huston/*</url-pattern>
     </servlet-mapping>
 
 	
@@ -41,8 +43,8 @@
     <context-param>
         <param-name>contextConfigLocation</param-name>
         <param-value>WEB-INF/applicationContext.xml
-            <!--classpath:it/agilis/mens/azzeroCO2/core/dao/HSQL-hibernate-context.xml-->
-            classpath:it/agilis/mens/plannings/core/dao/MySql-hibernate-context.xml
+            classpath:it/agilis/mens/plannings/core/dao/HSQL-hibernate-context.xml
+            <!--classpath:it/agilis/mens/plannings/core/dao/MySql-hibernate-context.xml-->
             classpath:it/agilis/mens/plannings/core/dao/context.xml
         </param-value>
     </context-param>
